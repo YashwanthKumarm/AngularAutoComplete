@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/angucomplete-alt.js"></script>
+<link href="~/Scripts/angucomplete-alt.css" rel="stylesheet" />
+<script src="~/AngularJs/module.js"></script>
+<script src="~/AngularJs/controller.js"></script>
+<script src="~/AngularJs/service.js"></script>
+<link href="~/Content/CustomCss.css" rel="stylesheet" />
+<h2>AutoComplete Textbox in AngularJS</h2>
+<div ng-app="myapp" ng-controller="mycontroller">
+    <div angucomplete-alt id="txtAutocomplete" placeholder="Type your country name" onpause="100"
+         selected-object="afterSelectedCountry" local-data="countries" search-fields="countryname"
+         title-field="countryname" minlength="1" input-class="form-control" match-class="highlight" input-changed="inputchanged">
+    </div>
+    <div ng-show="selectedCountry">
+        Selected Country: {{selectedCountry.countryname}}
+    </div>
+</div>
+
